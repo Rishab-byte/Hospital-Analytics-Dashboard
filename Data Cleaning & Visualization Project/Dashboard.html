@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hospital Analytics Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="badge">Data Science Internship Project</div>
+    <h1>Hospital Analytics Dashboard</h1>
+    <p>
+        End-to-end healthcare data analysis involving data cleaning, preprocessing,
+        exploratory data analysis and visualization using Python, Pandas, NumPy and Matplotlib.
+    </p>
+</header>
+
+<section class="kpis">
+    <div class="card">
+        <h3>Original Records</h3>
+        <h2>520</h2>
+    </div>
+
+    <div class="card">
+        <h3>Clean Records</h3>
+        <h2>500</h2>
+    </div>
+
+    <div class="card">
+        <h3>Duplicates Removed</h3>
+        <h2>20</h2>
+    </div>
+
+    <div class="card">
+        <h3>Avg Treatment Cost</h3>
+        <h2>₹160,808</h2>
+    </div>
+</section>
+
+<section>
+    <h2>Data Cleaning Summary</h2>
+
+    <table>
+        <tr>
+            <th>Column</th>
+            <th>Missing Values</th>
+            <th>Method Used</th>
+            <th>Reason</th>
+        </tr>
+
+        <tr>
+            <td>Disease</td>
+            <td>16</td>
+            <td>Mode</td>
+            <td>Preserves the most common disease category.</td>
+        </tr>
+
+        <tr>
+            <td>Age</td>
+            <td>27</td>
+            <td>Median</td>
+            <td>Median is resistant to outliers and represents a typical patient.</td>
+        </tr>
+
+        <tr>
+            <td>Hospital</td>
+            <td>11</td>
+            <td>Mode</td>
+            <td>Most common hospital was used to preserve records.</td>
+        </tr>
+
+        <tr>
+            <td>Treatment Cost</td>
+            <td>20</td>
+            <td>Median</td>
+            <td>Medical costs contain extreme values, making median more reliable.</td>
+        </tr>
+
+        <tr>
+            <td>Recovery Days</td>
+            <td>15</td>
+            <td>Median</td>
+            <td>Prevents unusually long recoveries from skewing analysis.</td>
+        </tr>
+
+        <tr>
+            <td>Duplicate Records</td>
+            <td>20</td>
+            <td>Removed</td>
+            <td>Improves data quality and prevents duplicate counting.</td>
+        </tr>
+    </table>
+</section>
+
+<section>
+    <h2>Visualizations</h2>
+
+    <div class="chart-grid">
+
+        <div class="chart">
+            <img src="cost_hospital.png" alt="Average Treatment Cost by Hospital">
+            <p>Average Treatment Cost by Hospital</p>
+        </div>
+
+        <div class="chart">
+            <img src="age_distribution.png" alt="Age Distribution">
+            <p>Age Distribution of Patients</p>
+        </div>
+
+        <div class="chart">
+            <img src="disease_frequency.png" alt="Disease Frequency">
+            <p>Disease Occurrence Among Patients</p>
+        </div>
+
+        <div class="chart">
+            <img src="gender_distribution.png" alt="Gender Distribution">
+            <p>Gender Distribution of Patients</p>
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <h2>Key Insights & Findings</h2>
+
+    <div class="findings">
+
+        <div class="finding">
+            <h3>🏥 Hospital Utilization</h3>
+            <p>Max Healthcare recorded the highest patient volume with 78 admissions.</p>
+        </div>
+
+        <div class="finding">
+            <h3>💰 Treatment Cost Analysis</h3>
+            <p>The average treatment cost across all patients was ₹160,808.</p>
+        </div>
+
+        <div class="finding">
+            <h3>👥 Patient Demographics</h3>
+            <p>Male patients accounted for 262 admissions while female patients accounted for 238.</p>
+        </div>
+
+        <div class="finding">
+            <h3>⏱ Recovery Analysis</h3>
+            <p>Average recovery duration was approximately 28.15 days.</p>
+        </div>
+
+        <div class="finding">
+            <h3>🧹 Data Cleaning Impact</h3>
+            <p>20 duplicate records were removed and missing values were handled using imputation.</p>
+        </div>
+
+        <div class="finding">
+            <h3>📊 Data Quality Strategy</h3>
+            <p>Median was used for numerical columns and mode was used for categorical columns.</p>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    Created using Python, Pandas, NumPy, Matplotlib, HTML and CSS
+</footer>
+
+</body>
+</html>
